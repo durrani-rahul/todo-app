@@ -6,6 +6,8 @@ import Dashboard from "./components/dashboard/Dashboard";
 import NavBar from "./components/layout/NavBar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LogRocket from 'logrocket';
+LogRocket.init('kkty3b/todo-application-4hhwt');
 
 function App() {
   return (
