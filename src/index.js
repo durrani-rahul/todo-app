@@ -11,10 +11,11 @@ import firebase from "./config/firebaseConfig";
 import { createFirestoreInstance } from "redux-firestore";
 import { useSelector } from "react-redux";
 import { isLoaded } from "react-redux-firebase";
+import LogRocket from 'logrocket';
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk.withExtraArgument({ getFirebase }))
+  applyMiddleware(thunk.withExtraArgument({ getFirebase }), LogRocket.reduxMiddleware())
 );
 
 const rrfProps = {
